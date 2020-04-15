@@ -25,4 +25,7 @@ class SchoolClassesController < ApplicationController
     @school_class.save
     redirect_to school_class_path(@school_class)
   end
+
+  private
+  def school_class_params
 end
