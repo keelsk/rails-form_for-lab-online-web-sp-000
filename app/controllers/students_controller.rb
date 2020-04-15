@@ -25,4 +25,9 @@ class StudentsController < ApplicationController
     @student.save
     redirect_to student_path(@student)
   end
+
+  private
+  def student_params
+    params.require(:student).permit(:room_number, :title) 
+  end
 end
