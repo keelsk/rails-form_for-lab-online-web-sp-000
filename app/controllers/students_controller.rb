@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new(post_params(:room_number, :title))
+    @student = Student.new(post_params(:first_name, :last_name))
     @student.save
     redirect_to school_class_path(@student)
   end
@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
   end
 
   def update
-    @student = Student.update(post_params(:room_number, :title))
+    @student = Student.update(post_params(:first_name, :last_name))
     @student.save
     redirect_to school_class_path(@student)
   end
