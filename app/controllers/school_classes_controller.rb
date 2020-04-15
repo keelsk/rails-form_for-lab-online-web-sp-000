@@ -10,7 +10,7 @@ class SchoolClassesController < ApplicationController
     @school_class = SchoolClass.find_by_id(params[:id])
   end
 
-  def create 
+  def create
     @school_class = SchoolClass.new(post_params(:room_number, :title))
     @school_class.room_number = post_params()
   end
